@@ -1,0 +1,21 @@
+/*
+  Blink
+  Turns on an LED on for one second, then off for one second, repeatedly.
+ 
+  This example code code code codecodecodecodecodecodecodecodecodecodecodecode is in the public domain.
+ */
+int LEDPIN = 13;
+
+void setup() {      
+  //Serial.begin(9600);
+  // initialize the digital pin as an output.
+  // Pin 13 has an LED connected on most Arduino boards:
+  pinMode(LEDPIN, OUTPUT);     
+}
+
+void loop() {
+  digitalWrite(LEDPIN, HIGH);   // set the LED on
+  delay(1000);              // wait for a second
+  digitalWrite(LEDPIN, LOW);    // set the LED off
+  delay(1000);              // wait for a second
+}
