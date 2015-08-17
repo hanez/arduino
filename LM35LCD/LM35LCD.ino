@@ -70,7 +70,7 @@ void lcd_refresh() {
   if(tempClast > tempC) {
     lcd.print((char)60); // ASCII code 60 = "<"
   } else if(tempClast < tempC) {
-    lcd.print((char)62); // ASCII code 61 = ">"
+    lcd.print((char)62); // ASCII code 62 = ">"
   } else {
     lcd.print((char)61); // ASCII code 61 = "="
   }
