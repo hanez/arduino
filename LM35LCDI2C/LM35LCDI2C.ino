@@ -1,3 +1,5 @@
+// Written 2015 by Johannes Findeisen <you@hanez.org>
+
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -24,18 +26,9 @@ float tempF = 0;
 
 void setup()
 {
-  /*lcd.init();
-  lcd.autoscroll();
-  lcd.setCursor(2, 0);
-  lcd.backlight();
-  lcd.print("Hello, world! asd as d as d asd");
-  lcd.setCursor(0, 1);
-  lcd.print("Hello, world2");
-  */
   pinMode(ledPin, OUTPUT);
   lcd.init();
   lcd.backlight();
-
   // Get data for the first time.
   // Read this to understand the temperature calculation:
   // http://www.danielandrade.net/2008/07/05/temperature-sensor-arduino/
