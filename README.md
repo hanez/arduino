@@ -1,8 +1,18 @@
-arduino
+Arduino
 =======
 
-All my Arduino stuff. Most files are many years old because I didn't hacked on
-Arduino for long time. Many files are just garbage and will be deleted at some
-time. I will try to make this repository clean ASAP. Currently I only need it
-for sharing my Arduino code between my devices.  I recommend not to use this 
-code actually.... ;)
+This is my repository for sharing my Arduino workspace. I don't create a repo 
+for each project because that's to much work... ;)
+
+I will describe my projects here some time... maybe...
+
+All my code is provided to you under the terms of the GPL license version 2. Be
+carefull when using my code because there are libraries included which my be
+available using a different license then mine. Be sure, everything is open 
+source and freely available but before copying some stuff to your project read
+the terms of use of used libraries.
+
+Have fun with this!
+
+P.S.: I share this on GitHub mostly for sharing across my devices so don't 
+wonder about crazy stuff... :)
