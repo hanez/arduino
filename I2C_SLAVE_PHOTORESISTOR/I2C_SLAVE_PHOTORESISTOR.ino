@@ -1,3 +1,4 @@
+// Written 2015 by Johannes Findeisen <you@hanez.org>
 
 #include <Wire.h>
 

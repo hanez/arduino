@@ -35,23 +35,29 @@ void setup()
   pinMode(ledPin, OUTPUT);
 
   Wire.begin();
-  
+
   LightSensor.begin();
   LightSensor.SetAddress(Device_Address_L); // Address 0x23
   LightSensor.SetMode(Continuous_H_resolution_Mode);
+
   lcd.init();
   lcd.backlight();
+
   // Get data for the first time.
   // Read this to understand the temperature calculation:
   // http://www.danielandrade.net/2008/07/05/temperature-sensor-arduino/
   tempC = (5.0 * analogRead(tempPin) * 100.0) / 1024.0;
   tempClast = tempC;
+
   // Celsius to Fahrenheit conversion
   tempF = (tempC * 9) / 5 + 32;
+
   // Get light sensor data
   lux = LightSensor.GetLightIntensity();
+
   // Get data from other Arduino on 0x07
   read_wire();
+
   // Refresh the LCD output
   lcd_refresh();
 }
@@ -69,14 +75,19 @@ void loop()
   }
   // Calculate temperature
   tempC = tempC / (float)samples;
+
   // Celsius to Fahrenheit conversion.
   tempF = (tempC * 9) / 5 + 32;
+
   // Get light sensor data
   lux = LightSensor.GetLightIntensity();
+
   // Get data from I2C attached Arduino
   read_wire();
+
   // Print results to the display.
   lcd_refresh();
+
   // Remember current temperature for next run.
   tempClast = tempC;
 }
@@ -86,9 +97,9 @@ void lcd_refresh() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print(lux);
-  lcd.print(" Lux / ");
+  lcd.print("Lux/");
   lcd.print(photo);
-  lcd.print(" Pr");
+  lcd.print((char)0b11110100); // Thats the sign for Ohm but the value is not Ohm. I use this sign to represent the photo resister value
   lcd.setCursor(0, 1);
   lcd.print(tempC);
   lcd.print((char)223); // ASCII code 223 = "°"
