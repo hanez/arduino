@@ -6,6 +6,7 @@
 BH1750FVI LightSensor;
 
 void setup() {
+  pinMode(13, OUTPUT);
   Serial.begin(9600);
   LightSensor.begin();
   LightSensor.SetAddress(Device_Address_L);
@@ -17,5 +18,8 @@ void loop() {
   Serial.print("Light: ");
   Serial.print(lux);
   Serial.println(" lux");
-  delay(1000);
+  digitalWrite(13, HIGH);
+  delay(200);
+  digitalWrite(13, LOW);
+  delay(800);
 }
