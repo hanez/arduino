@@ -20,7 +20,7 @@ void loop()
 
 void requestEvent()
 {
-  Wire.write(analogRead(lightPin)); // respond with message of 6 bytes
+  Wire.write(analogRead(lightPin));
   digitalWrite(13, HIGH);
   delay(50);
   digitalWrite(13, LOW);
