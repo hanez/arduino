@@ -1,4 +1,3 @@
-
 // the setup routine runs once when you press reset:
 void setup() {                
   // initialize the digital pin as an output.
@@ -10,8 +9,8 @@ void setup() {
 void loop() {
   digitalWrite(0, HIGH);   // turn the LED on (HIGH is the voltage level)
   digitalWrite(1, HIGH);
-  delay(100);               // wait for a second
+  delay(1000);               // wait for a second
   digitalWrite(0, LOW);    // turn the LED off by making the voltage LOW
   digitalWrite(1, LOW); 
-  delay(100);               // wait for a second
+  delay(1000);               // wait for a second
 }
