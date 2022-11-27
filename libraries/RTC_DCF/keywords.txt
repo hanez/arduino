@@ -1,0 +1,69 @@
+#######################################
+# Syntax Coloring Map For RTC_DCF
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+RTC_PERIODIC_INT_PULSE_1_HZ	KEYWORD1
+RTC_PERIODIC_INT_PULSE_2_HZ	KEYWORD1
+RTC_PERIODIC_INT_LEVEL_EVERY_SECOND	KEYWORD1
+RTC_PERIODIC_INT_LEVEL_EVERY_MINUTE	KEYWORD1
+RTC_PERIODIC_INT_LEVEL_EVERY_HOUR	KEYWORD1
+RTC_PERIODIC_INT_LEVEL_EVERY_DAY	KEYWORD1
+RTC_PERIODIC_INT_LEVEL_EVERY_MONTH	KEYWORD1
+
+RTC_ALARM_WEEKDAYS_NONE	KEYWORD1
+RTC_ALARM_WEEKDAYS_MON	KEYWORD1
+RTC_ALARM_WEEKDAYS_TUE	KEYWORD1
+RTC_ALARM_WEEKDAYS_WED	KEYWORD1
+RTC_ALARM_WEEKDAYS_THU	KEYWORD1
+RTC_ALARM_WEEKDAYS_FRI	KEYWORD1
+RTC_ALARM_WEEKDAYS_SAT	KEYWORD1
+RTC_ALARM_WEEKDAYS_SUN	KEYWORD1
+RTC_ALARM_WEEKDAYS_MON_TO_FRI	KEYWORD1
+RTC_ALARM_WEEKDAYS_SAT_TO_SUN	KEYWORD1
+RTC_ALARM_WEEKDAYS_ALL	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+
+setDateTime	KEYWORD2
+getDateTime	KEYWORD2
+
+setAlarmTime	KEYWORD2
+getAlarmTime	KEYWORD2
+enableAlarmInterrupt	KEYWORD2
+disableAlarmInterrupt	KEYWORD2
+resetAlarmInterrupt	KEYWORD2
+enableAlarmLED	KEYWORD2
+disableAlarmLED	KEYWORD2
+
+setPeriodicInterruptMode	KEYWORD2
+enablePeriodicInterrupt	KEYWORD2
+disablePeriodicInterrupt	KEYWORD2
+resetPeriodicInterrupt	KEYWORD2
+enablePeriodicInterruptLED	KEYWORD2
+disablePeriodicInterruptLED	KEYWORD2
+
+enableDCF77Reception	KEYWORD2
+disableDCF77Reception	KEYWORD2
+enableDCF77Interrupt	KEYWORD2
+disableDCF77Interrupt	KEYWORD2
+resetDCF77Interrupt	KEYWORD2
+enableDCF77LED	KEYWORD2
+disableDCF77LED	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+RTC_DCF	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

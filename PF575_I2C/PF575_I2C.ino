@@ -1,0 +1,57 @@
+#include <Wire.h>
+
+/** 
+ *  Arduino PF575/PCF8575 I2C I/O port exapander LED blink example
+ *  
+ *  Setup:
+ *  
+ *  1. Connect A0, A1 and A2 to GND to set the address to 0x20.
+ *  2. Connect SDL and SCL to the Arduino's I2C bus.
+ *  3. Connect a LED to the P0 port of the I2C exapander.
+ *     In my setup I am using a PNP Transistor connected to 5V unsing 
+ *     an resistor, the LED and the Arduino to make sure the LED gets
+ *     a current from Vcc and not from the I2C exapander port.
+ *  
+ *  This code is trying to explain how it works as simple as possible.
+ *  More detailed examples are found on the web. Search for pcf8575 and
+ *  you will find what you want.
+*/
+
+// Set I2C address
+int address = 0x20;
+
+void setup(){ 
+  Wire.begin();
+  // Set all ports as output
+  //pf575_write(word(B11111111,B11111111));
+  //delay(1000);
+  pf575_write(word(B00000000,B00000000));
+} 
+
+void loop(){
+  int dTime = 1000;
+  pf575_write(word(B00000001,B00000000));
+  delay(dTime);
+  pf575_write(word(B00000011,B00000000));
+  delay(dTime);
+  pf575_write(word(B00000111,B00000000));
+  delay(dTime);
+  pf575_write(word(B00001111,B00000000));
+  delay(dTime);
+  pf575_write(word(B00001110,B00000000));
+  delay(dTime);
+  pf575_write(word(B00001100,B00000000));
+  delay(dTime);
+  pf575_write(word(B00001000,B00000000));
+  delay(dTime);
+  pf575_write(word(B00000000,B00000000));
+  delay(dTime);
+} 
+
+// Function for writing two Bytes to the I2C expander device
+void pf575_write(uint16_t data) {
+  Wire.beginTransmission(address);
+  Wire.write(highByte(data));
+  Wire.write(lowByte(data));
+  Wire.endTransmission();
+}
