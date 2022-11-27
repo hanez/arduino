@@ -3,7 +3,7 @@
 // Set I2C address
 int address = 0x20;
 
-int samples = 2;
+int samples = 8;
 int collectDelay = 1000;
 int ledPin = 13;
 int tempPin = 0;
@@ -35,28 +35,31 @@ void loop() {
     delay((collectDelay / 2));
   }
   tempC = tempC / (float)samples;
-  if(tempC > 21) {
+  if(tempC < 21) {
+    pf575_write(word(B11111111,B11111111));
+  }
+  if(tempC >= 21) {
     pf575_write(word(B11111110,B11111111));
   }
-  if(tempC > 23) {
+  if(tempC >= 23) {
     pf575_write(word(B11111100,B11111111));
   }
-  if(tempC > 25) {
+  if(tempC >= 25) {
     pf575_write(word(B11111000,B11111111));
   }
-  if(tempC > 27) {
+  if(tempC >= 27) {
     pf575_write(word(B11110000,B11111111));
   }
-  if(tempC > 29) {
+  if(tempC >= 29) {
     pf575_write(word(B11100000,B11111111));
   }
-  if(tempC > 31) {
+  if(tempC >= 31) {
     pf575_write(word(B11000000,B11111111));
   }
-  if(tempC > 33) {
+  if(tempC >= 33) {
     pf575_write(word(B10000000,B11111111));
   }
-  if(tempC > 35) {
+  if(tempC >= 35) {
     pf575_write(word(B00000000,B11111111));
   }
 } 
