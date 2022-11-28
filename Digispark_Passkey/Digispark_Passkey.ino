@@ -1,9 +1,11 @@
 #include "DigiKeyboard.h"
+#include <Blinker.h>
 #include <ezButton.h>
 
 int ACTION_PIN = 0;
 int LED_PIN = 1;
 
+Blinker blinker(LED_PIN);
 ezButton button(ACTION_PIN);
 
 char *passwords[] = {
@@ -14,10 +16,9 @@ char *passwords[] = {
 };
 
 void setup() {
-  pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, LOW);
-  delay(500);
-  digitalWrite(LED_PIN, HIGH);
+  //pinMode(LED_PIN, OUTPUT);
+  blinker.setDelay(25, 10000);
+  blinker.start();
   //pinMode(ACTION_PIN, INPUT);
   button.setCountMode(COUNT_RISING);
   button.setDebounceTime(0);
@@ -26,6 +27,7 @@ void setup() {
 }
 
 void loop() {
+  blinker.blink();
   button.loop();
 
   /*digitalWrite(LED_PIN, HIGH);
