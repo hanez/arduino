@@ -77,6 +77,7 @@ void loop() {
       default:
         break;
     }
-    count = 0; // reset the counter
+    // reset the counter
+    count = 0;
   }
 }
