@@ -50,7 +50,7 @@ void setup() {
   digitalWrite(BUTTON_PIN, HIGH);
 
   // Set blink effect (ON, OFF) in milliseconds
-  blinker.setDelay(25, 10000);
+  blinker.setDelay(25, 9075);
   blinker.start();
 
   // Initialize HID
