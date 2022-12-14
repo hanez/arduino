@@ -73,10 +73,12 @@ void loop() {
     // Button is pressed
     last = millis();
     count++;
+    digitalWrite(LED_PIN, HIGH);
     // Wait until button is released
     while (digitalRead(BUTTON_PIN) == LOW) {
       delay(1);
     }
+    digitalWrite(LED_PIN, LOW);
   }
 
   // Wait PAUSE time before executing a command
