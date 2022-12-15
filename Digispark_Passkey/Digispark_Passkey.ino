@@ -71,13 +71,14 @@ void loop() {
   // Read button state
   if (digitalRead(BUTTON_PIN) == LOW) {
     // Button is pressed
-    last = millis();
     count++;
     digitalWrite(LED_PIN, HIGH);
     // Wait until button is released
     while (digitalRead(BUTTON_PIN) == LOW) {
       delay(1);
     }
+    // Set the last press timestamp
+    last = millis();
     digitalWrite(LED_PIN, LOW);
   }
 
