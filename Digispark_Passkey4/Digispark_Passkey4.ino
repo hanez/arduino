@@ -46,13 +46,12 @@ const char *passwords[] = {
 
 void setup() {
   // Set button pin to be INPUT.
-  pinMode(BUTTON_PIN, INPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
   // Set BUTTON_PIN pin to LOW because the button is connected 
   // to VCC when pressed and will go HIGH. Before glow up for 1 second to show the device is ready.
   digitalWrite(BUTTON_PIN, HIGH);
   delay(1000);
   digitalWrite(BUTTON_PIN, LOW);
-
   // Initialize HID
   DigiKeyboard.delay(0);
   DigiKeyboard.sendKeyStroke(0);
@@ -70,7 +69,6 @@ void loop() {
     // Set the last press timestamp
     last = millis();
   }
-
   // Wait PAUSE time before executing a command
   if (count > 0 && (millis() - last) >= PAUSE) {
     // The switch case is the number of button presses
