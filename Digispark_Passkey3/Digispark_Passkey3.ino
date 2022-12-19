@@ -43,7 +43,7 @@ const char *passwords[] = {
 };
 
 void setup() {
-  // Set button pin to HIGH.
+  // Set button pin to be INPUT.
   pinMode(BUTTON_PIN, INPUT);
   // Set BUTTON_PIN pin to HIGH because the button is connected 
   // to GND when pressed and will go LOW
