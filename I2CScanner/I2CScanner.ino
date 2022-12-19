@@ -16,6 +16,9 @@
  // Using Arduino 1.0.1
  //
  // Source: https://forum.arduino.cc/t/atmel-24c256-showing-up-at-wrong-i2c-address/123760/4
+ // Better code but not working for me:
+ // https://create.arduino.cc/projecthub/sainisagar7294/how-to-find-i2c-address-using-arduino-a24f72
+ // https://stackoverflow.com/questions/57978198/can-an-i2c-eeprom-have-two-addresses
  
 #include <Wire.h>
  
