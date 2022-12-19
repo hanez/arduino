@@ -43,9 +43,9 @@ const char *passwords[] = {
 };
 
 void setup() {
-  // Set button pin to high.
+  // Set button pin to HIGH.
   pinMode(BUTTON_PIN, INPUT);
-  // Set BUTTON_PIN pin to high because the button is connected 
+  // Set BUTTON_PIN pin to HIGH because the button is connected 
   // to GND when pressed and will go LOW
   digitalWrite(BUTTON_PIN, HIGH);
 
