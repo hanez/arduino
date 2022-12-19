@@ -48,9 +48,9 @@ void setup() {
   // Set button pin to be INPUT.
   pinMode(BUTTON_PIN, INPUT);
   // Set BUTTON_PIN pin to LOW because the button is connected 
-  // to VCC when pressed and will go HIGH
+  // to VCC when pressed and will go HIGH. Before glow up for 1 second to show the device is ready.
   digitalWrite(BUTTON_PIN, HIGH);
-  delay(2000);
+  delay(1000);
   digitalWrite(BUTTON_PIN, LOW);
 
   // Initialize HID
